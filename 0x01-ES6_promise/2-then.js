@@ -3,11 +3,12 @@
  * @param {Promise} promise
  */
 export default function handleResponseFromAPI(promise) {
-  return promise.then((value) => {
-    console.log('Got a reponse from the API');
-    return value;
-  }).then(() => ({
+  return promise.then(() => ({
     status: 200,
     body: 'success',
-  })).catch(() => new Error());
+  }))
+    .catch(() => new Error())
+    .finally(() => {
+      console.warn('Got a response from the API');
+    });
 }
