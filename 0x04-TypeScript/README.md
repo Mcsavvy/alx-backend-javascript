@@ -1,0 +1,2 @@
+# 0x04. TypeScript
+In this project, you will learn the basics of TypeScript. TypeScript is a strict syntactical superset of JavaScript and adds static typing to the language. This allows you to catch errors early and clean up your code.
