@@ -6,6 +6,7 @@
 export default function cleanSet(set, startString) {
   let result = '';
   set.forEach((val) => {
+    if (!(typeof val === 'string')) return;
     if (startString && startString.length && val.startsWith(startString)) {
       result = result.concat('-', val.slice(startString.length));
     }
